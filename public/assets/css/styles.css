@@ -1,18 +1,120 @@
 body {
     font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-    background-color: #f8f9fb;
+    background: radial-gradient(circle at top, #f4f6fb, #e8ebf4 55%, #fdfdff);
+    color: #1f2a37;
+    min-height: 100vh;
+}
+
+main {
+    background-color: transparent;
+}
+
+.section-block {
+    margin-bottom: 3rem;
+}
+
+.mb-6 {
+    margin-bottom: 4rem !important;
+}
+
+.py-md-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+@media (min-width: 992px) {
+    .py-md-6 {
+        padding-top: 6.5rem;
+        padding-bottom: 6.5rem;
+    }
+}
+
+.hero-panel {
+    background: linear-gradient(135deg, rgba(12, 24, 68, 0.95), rgba(22, 58, 112, 0.9));
+    color: #fff;
+}
+
+.hero-panel .card {
+    border-radius: 1.25rem;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #fff;
+}
+
+.feature-tile {
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.site-header {
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand {
+    letter-spacing: 0.08em;
+    color: #0f172a;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    color: #4b5563;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+    color: #0f172a;
+    background-color: rgba(15, 23, 42, 0.08);
+}
+
+.tracking-tight {
+    letter-spacing: 0.12em;
 }
 
 .card {
     border: none;
-    border-radius: 0.85rem;
+    border-radius: 1.15rem;
+    background-color: #fff;
 }
 
 .card-header {
-    border-top-left-radius: 0.85rem;
-    border-top-right-radius: 0.85rem;
+    border-top-left-radius: 1.15rem;
+    border-top-right-radius: 1.15rem;
+    border-bottom: none;
+    background-color: transparent;
 }
 
-.navbar-brand {
-    letter-spacing: 0.04em;
+.site-footer {
+    background: #0f172a;
+    color: #fff;
+}
+
+.site-footer small {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+table thead th {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.badge {
+    border-radius: 999px;
+    padding: 0.5rem 0.85rem;
 }

@@ -11,20 +11,22 @@ declare(strict_types=1);
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="/">Fund EQ</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link<?= ($_GET['page'] ?? 'home') === 'home' ? ' active' : '' ?>" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link<?= ($_GET['page'] ?? '') === 'team' ? ' active' : '' ?>" href="/?page=team">Team</a></li>
-                <li class="nav-item"><a class="nav-link<?= ($_GET['page'] ?? '') === 'tasks' ? ' active' : '' ?>" href="/?page=tasks">Tasks</a></li>
-            </ul>
+<header class="site-header shadow-sm">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-uppercase tracking-tight" href="/">Fund EQ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                    <li class="nav-item"><a class="nav-link<?= ($_GET['page'] ?? 'home') === 'home' ? ' active' : '' ?>" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link<?= ($_GET['page'] ?? '') === 'team' ? ' active' : '' ?>" href="/?page=team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link<?= ($_GET['page'] ?? '') === 'tasks' ? ' active' : '' ?>" href="/?page=tasks">Tasks</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-<main class="py-5">
-    <div class="container">
+    </nav>
+</header>
+<main>
+    <div class="container py-5 py-md-6">

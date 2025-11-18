@@ -1,23 +1,25 @@
 <?php
 declare(strict_types=1);
 ?>
-<section class="mb-4">
-    <div class="d-flex justify-content-between mb-3">
+<section class="section-block">
+    <div class="d-flex flex-column flex-lg-row justify-content-between gap-3 mb-4">
         <div>
-            <span class="badge text-bg-success mb-2">Supabase-backed</span>
-            <h2 class="fw-bold mb-0">Transition Checklist</h2>
-            <p class="text-muted mb-0">Track insurance, technology, AFSL, and promotional readiness in one CRUD surface.</p>
+            <span class="badge text-bg-success-subtle text-success mb-2">Supabase-backed</span>
+            <h2 class="fw-bold mb-2">Transition Checklist</h2>
+            <p class="text-body-secondary mb-0">Track insurance, technology enablement, AFSL obligations, and promotional readiness in one responsive CRUD workspace.</p>
         </div>
-        <a class="btn btn-outline-primary align-self-start" href="/?page=tasks">Refresh Tasks</a>
+        <a class="btn btn-outline-primary align-self-start" href="/?page=tasks">Refresh tasks</a>
     </div>
     <?php if (!empty($message)): ?>
         <div class="alert alert-<?= htmlspecialchars($messageStatus ?? 'success') ?>"><?= htmlspecialchars($message) ?></div>
     <?php endif; ?>
     <div class="row g-4">
         <div class="col-lg-4">
-            <div class="card h-100">
-                <div class="card-header">Create Task</div>
-                <div class="card-body">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-white">
+                    <span class="fw-semibold">Create task</span>
+                </div>
+                <div class="card-body p-4">
                     <form method="post">
                         <input type="hidden" name="action" value="create">
                         <div class="mb-3">
@@ -32,12 +34,12 @@ declare(strict_types=1);
                             <label class="form-label">Status</label>
                             <select class="form-select" name="status">
                                 <option value="Planned">Planned</option>
-                                <option value="In Progress">In Progress</option>
+                                <option value="In Progress">In progress</option>
                                 <option value="Complete">Complete</option>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Proposed Start Date</label>
+                            <label class="form-label">Proposed start date</label>
                             <input class="form-control" type="date" name="start_date">
                         </div>
                         <button class="btn btn-primary w-100" type="submit">Create</button>
@@ -46,9 +48,9 @@ declare(strict_types=1);
             </div>
         </div>
         <div class="col-lg-8">
-            <div class="card h-100">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <span>Tasks</span>
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-white d-flex flex-column flex-sm-row justify-content-between align-items-sm-center">
+                    <span class="fw-semibold">Tasks</span>
                     <span class="text-muted small">Full CRUD via Supabase REST</span>
                 </div>
                 <div class="table-responsive">
@@ -70,7 +72,7 @@ declare(strict_types=1);
                                     <td class="fw-semibold"><?= htmlspecialchars((string) ($task['id'] ?? '')) ?></td>
                                     <td><?= htmlspecialchars($task['title'] ?? '') ?></td>
                                     <td><?= htmlspecialchars($task['owner'] ?? '') ?></td>
-                                    <td><span class="badge bg-secondary"><?= htmlspecialchars($task['status'] ?? 'Planned') ?></span></td>
+                                    <td><span class="badge bg-secondary-subtle text-secondary"><?= htmlspecialchars($task['status'] ?? 'Planned') ?></span></td>
                                     <td><?= htmlspecialchars($task['start_date'] ?? '—') ?></td>
                                     <td class="text-end">
                                         <button class="btn btn-sm btn-outline-primary me-2"
@@ -128,12 +130,12 @@ declare(strict_types=1);
                         <label class="form-label">Status</label>
                         <select class="form-select" id="edit-status" name="status">
                             <option value="Planned">Planned</option>
-                            <option value="In Progress">In Progress</option>
+                            <option value="In Progress">In progress</option>
                             <option value="Complete">Complete</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Proposed Start Date</label>
+                        <label class="form-label">Proposed start date</label>
                         <input class="form-control" id="edit-date" type="date" name="start_date">
                     </div>
                 </div>
